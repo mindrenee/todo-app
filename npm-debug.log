@@ -1,0 +1,187 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'update', '-g', 'phonegap' ]
+2 info using npm@2.5.1
+3 info using node@v0.12.0
+4 silly mapToRegistry name phonegap
+5 silly mapToRegistry using default registry
+6 silly mapToRegistry registry https://registry.npmjs.org/
+7 silly mapToRegistry uri https://registry.npmjs.org/phonegap
+8 verbose request uri https://registry.npmjs.org/phonegap
+9 verbose request no auth needed
+10 info attempt registry request try #1 at 19:53:08
+11 verbose request id 2c711033f3fa534f
+12 verbose etag "844X0GD88MF7245UDA7A86E9G"
+13 http request GET https://registry.npmjs.org/phonegap
+14 http 200 https://registry.npmjs.org/phonegap
+15 silly get cb [ 200,
+15 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+15 silly get     etag: '"5B1DAOO2KXD541UCTX6W2RKZQ"',
+15 silly get     'content-type': 'application/json',
+15 silly get     'cache-control': 'max-age=60',
+15 silly get     'content-length': '219357',
+15 silly get     'accept-ranges': 'bytes',
+15 silly get     date: 'Thu, 04 Jun 2015 17:53:09 GMT',
+15 silly get     via: '1.1 varnish',
+15 silly get     age: '0',
+15 silly get     connection: 'keep-alive',
+15 silly get     'x-served-by': 'cache-ams4127-AMS',
+15 silly get     'x-cache': 'HIT',
+15 silly get     'x-cache-hits': '1',
+15 silly get     'x-timer': 'S1433440388.487078,VS0,VE654',
+15 silly get     vary: 'Accept' } ]
+16 verbose get saving phonegap to /Users/rwitsenburg/.npm/registry.npmjs.org/phonegap/.cache.json
+17 info outdated updating [ [ '/usr/local/lib',
+17 info outdated     'phonegap',
+17 info outdated     '5.0.0-0.27.1',
+17 info outdated     '5.0.0-0.28.1',
+17 info outdated     '5.0.0-0.28.1',
+17 info outdated     'latest' ] ]
+18 verbose install where, what [ '/usr/local/lib', [ 'phonegap@5.0.0-0.28.1' ] ]
+19 silly cache add args [ 'phonegap@5.0.0-0.28.1', null ]
+20 verbose cache add spec phonegap@5.0.0-0.28.1
+21 silly cache add parsed spec { raw: 'phonegap@5.0.0-0.28.1',
+21 silly cache add   scope: null,
+21 silly cache add   name: 'phonegap',
+21 silly cache add   rawSpec: '5.0.0-0.28.1',
+21 silly cache add   spec: '5.0.0-0.28.1',
+21 silly cache add   type: 'version' }
+22 verbose addNamed phonegap@5.0.0-0.28.1
+23 silly addNamed semver.valid 5.0.0-0.28.1
+24 silly addNamed semver.validRange 5.0.0-0.28.1
+25 silly mapToRegistry name phonegap
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry uri https://registry.npmjs.org/phonegap
+29 verbose addNameVersion registry:https://registry.npmjs.org/phonegap not in flight; fetching
+30 verbose get https://registry.npmjs.org/phonegap not expired, no request
+31 silly mapToRegistry name phonegap
+32 silly mapToRegistry using default registry
+33 silly mapToRegistry registry https://registry.npmjs.org/
+34 silly mapToRegistry uri https://registry.npmjs.org/phonegap
+35 verbose addRemoteTarball https://registry.npmjs.org/phonegap/-/phonegap-5.0.0-0.28.1.tgz not in flight; adding
+36 verbose addRemoteTarball [ 'https://registry.npmjs.org/phonegap/-/phonegap-5.0.0-0.28.1.tgz',
+36 verbose addRemoteTarball   '897d96369e6aa71ec19b2758923e58b70ce2b586' ]
+37 info retry fetch attempt 1 at 19:53:09
+38 info attempt registry request try #1 at 19:53:09
+39 http fetch GET https://registry.npmjs.org/phonegap/-/phonegap-5.0.0-0.28.1.tgz
+40 http fetch 200 https://registry.npmjs.org/phonegap/-/phonegap-5.0.0-0.28.1.tgz
+41 silly fetchAndShaCheck shasum 897d96369e6aa71ec19b2758923e58b70ce2b586
+42 verbose addTmpTarball /var/folders/ld/h4_84bq50jx2zyd0d2kr9mcw0000gn/T/npm-2415-5d35f40b/registry.npmjs.org/phonegap/-/phonegap-5.0.0-0.28.1.tgz not in flight; adding
+43 verbose addTmpTarball already have metadata; skipping unpack for phonegap@5.0.0-0.28.1
+44 silly cache afterAdd phonegap@5.0.0-0.28.1
+45 verbose afterAdd /Users/rwitsenburg/.npm/phonegap/5.0.0-0.28.1/package/package.json not in flight; writing
+46 verbose afterAdd /Users/rwitsenburg/.npm/phonegap/5.0.0-0.28.1/package/package.json written
+47 silly install resolved [ { name: 'phonegap',
+47 silly install resolved     description: 'PhoneGap command-line interface and node.js library.',
+47 silly install resolved     version: '5.0.0-0.28.1',
+47 silly install resolved     homepage: 'http://github.com/phonegap/phonegap-cli',
+47 silly install resolved     repository:
+47 silly install resolved      { type: 'git',
+47 silly install resolved        url: 'git://github.com/phonegap/phonegap-cli.git' },
+47 silly install resolved     keywords:
+47 silly install resolved      [ 'cli',
+47 silly install resolved        'cordova',
+47 silly install resolved        'phonegap',
+47 silly install resolved        'phonegap build',
+47 silly install resolved        'phonegap/build' ],
+47 silly install resolved     preferGlobal: 'true',
+47 silly install resolved     main: './lib/main.js',
+47 silly install resolved     bin: { phonegap: './bin/phonegap.js' },
+47 silly install resolved     scripts: { test: 'jasmine-node --color spec' },
+47 silly install resolved     engineStrict: 'true',
+47 silly install resolved     engines: { node: '>=0.10.0' },
+47 silly install resolved     dependencies:
+47 silly install resolved      { colors: '0.6.0-1',
+47 silly install resolved        'connect-phonegap': '0.16.1',
+47 silly install resolved        cordova: '5.0.0',
+47 silly install resolved        minimist: '0.1.0',
+47 silly install resolved        'phonegap-build': '0.9.1',
+47 silly install resolved        pluralize: '0.0.4',
+47 silly install resolved        prompt: '0.2.11',
+47 silly install resolved        'qrcode-terminal': '0.9.4',
+47 silly install resolved        semver: '1.1.0',
+47 silly install resolved        shelljs: '0.1.4' },
+47 silly install resolved     devDependencies: { 'jasmine-node': '1.14.5', chdir: '0.0.x' },
+47 silly install resolved     optionalDependencies: {},
+47 silly install resolved     contributors: [ [Object], [Object], [Object], [Object], [Object] ],
+47 silly install resolved     templates:
+47 silly install resolved      { blank: [Object],
+47 silly install resolved        'hello-world': [Object],
+47 silly install resolved        'hello-cordova': [Object],
+47 silly install resolved        'jquery-mobile-starter': [Object] },
+47 silly install resolved     gitHead: 'f1238713eebab3684af362413c898dc4a5bfe65c',
+47 silly install resolved     bugs: { url: 'https://github.com/phonegap/phonegap-cli/issues' },
+47 silly install resolved     _id: 'phonegap@5.0.0-0.28.1',
+47 silly install resolved     _shasum: '897d96369e6aa71ec19b2758923e58b70ce2b586',
+47 silly install resolved     _from: 'phonegap@5.0.0-0.28.1',
+47 silly install resolved     _npmVersion: '2.5.1',
+47 silly install resolved     _nodeVersion: '0.12.0',
+47 silly install resolved     _npmUser: { name: 'mwbrooks', email: 'michael@michaelbrooks.ca' },
+47 silly install resolved     dist:
+47 silly install resolved      { shasum: '897d96369e6aa71ec19b2758923e58b70ce2b586',
+47 silly install resolved        tarball: 'http://registry.npmjs.org/phonegap/-/phonegap-5.0.0-0.28.1.tgz' },
+47 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+47 silly install resolved     directories: {},
+47 silly install resolved     _resolved: 'https://registry.npmjs.org/phonegap/-/phonegap-5.0.0-0.28.1.tgz' } ]
+48 info install phonegap@5.0.0-0.28.1 into /usr/local/lib
+49 info installOne phonegap@5.0.0-0.28.1
+50 verbose installOne of phonegap to /usr/local/lib not in flight; installing
+51 verbose lock using /Users/rwitsenburg/.npm/_locks/phonegap-e2bb9ce47409f16e.lock for /usr/local/lib/node_modules/phonegap
+52 silly install write writing phonegap 5.0.0-0.28.1 to /usr/local/lib/node_modules/phonegap
+53 silly cache addNamed cb phonegap@5.0.0-0.28.1
+54 verbose unbuild lib/node_modules/phonegap
+55 info preuninstall phonegap@5.0.0-0.27.1
+56 info uninstall phonegap@5.0.0-0.27.1
+57 verbose unbuild rmStuff phonegap@5.0.0-0.27.1 from /usr/local/lib/node_modules
+58 verbose gentlyRm verifying that /usr/local is managed by npm
+59 silly isManaged /usr/local is not inside /usr/local/lib/node_modules
+60 silly isManaged /usr/local is not inside /usr/local/lib/node_modules
+61 silly isManaged /usr/local/bin is inside /usr/local
+62 silly gentlyRm /usr/local is managed by npm
+63 silly gentlyRm /usr/local/bin/phonegap is under /usr/local
+64 verbose gentlyRm vacuuming /usr/local/bin/phonegap up to /usr/local
+65 silly gentlyRm removing /usr/local/bin/phonegap
+66 silly gentlyRm quitting because other entries in /usr/local/bin
+67 info postuninstall phonegap@5.0.0-0.27.1
+68 verbose gentlyRm vacuuming /usr/local/lib/node_modules/phonegap
+69 silly gentlyRm purging /usr/local/lib/node_modules/phonegap
+70 verbose unlock done using /Users/rwitsenburg/.npm/_locks/phonegap-e2bb9ce47409f16e.lock for /usr/local/lib/node_modules/phonegap
+71 verbose stack Error: EACCES, unlink '/usr/local/lib/node_modules/phonegap'
+71 verbose stack     at Error (native)
+72 verbose cwd /Users/rwitsenburg/git/todo-app
+73 error Darwin 13.4.0
+74 error argv "node" "/usr/local/bin/npm" "update" "-g" "phonegap"
+75 error node v0.12.0
+76 error npm  v2.5.1
+77 error path /usr/local/lib/node_modules/phonegap
+78 error code EACCES
+79 error errno -13
+80 error Error: EACCES, unlink '/usr/local/lib/node_modules/phonegap'
+80 error     at Error (native)
+80 error  { [Error: EACCES, unlink '/usr/local/lib/node_modules/phonegap']
+80 error   errno: -13,
+80 error   code: 'EACCES',
+80 error   path: '/usr/local/lib/node_modules/phonegap' }
+81 error Please try running this command again as root/Administrator.
+82 verbose exit [ -13, true ]
+83 verbose unbuild lib/node_modules/phonegap
+84 info preuninstall phonegap@5.0.0-0.27.1
+85 info uninstall phonegap@5.0.0-0.27.1
+86 verbose unbuild rmStuff phonegap@5.0.0-0.27.1 from /usr/local/lib/node_modules
+87 verbose gentlyRm verifying that /usr/local is managed by npm
+88 silly isManaged /usr/local is not inside /usr/local/lib/node_modules
+89 silly isManaged /usr/local is not inside /usr/local/lib/node_modules
+90 silly isManaged /usr/local is not inside /usr/local/bin
+91 silly isManaged /usr/local is inside /usr/local
+92 silly gentlyRm /usr/local is managed by npm
+93 silly gentlyRm /usr/local/bin/phonegap is under /usr/local
+94 verbose gentlyRm vacuuming /usr/local/bin/phonegap up to /usr/local
+95 info postuninstall phonegap@5.0.0-0.27.1
+96 verbose gentlyRm vacuuming /usr/local/lib/node_modules/phonegap
+97 silly gentlyRm purging /usr/local/lib/node_modules/phonegap
+98 error error rolling back Error: EACCES, unlink '/usr/local/lib/node_modules/phonegap'
+98 error error rolling back     at Error (native)
+98 error error rolling back  { [Error: EACCES, unlink '/usr/local/lib/node_modules/phonegap']
+98 error error rolling back   errno: -13,
+98 error error rolling back   code: 'EACCES',
+98 error error rolling back   path: '/usr/local/lib/node_modules/phonegap' }
