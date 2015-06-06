@@ -56,7 +56,6 @@ function deleteSelectedRow(deleteButton) {
 // save the to-do list
 function saveToDoList() {
     var todoArray = {};
-    var checkBoxState = 0;
     var textValue = "";
  
     var table = document.getElementById("dataTable");
@@ -94,12 +93,12 @@ function loadToDoList() {
     // use the local storage API load the JSON formatted to-do list, and decode it
     var theList = JSON.parse(window.localStorage.getItem("todoList"));
  
-    if (null == theList || theList == "null")
+    /*if (null == theList || theList == "null")
     {
         //deleteAllRows();
     }
     else
-    {
+    {*/
         var count = 0;
         for (var obj in theList)
         {
@@ -115,6 +114,6 @@ function loadToDoList() {
             // adding a row to the table for each one
             addTableRow(theList["row" + i], true);
         }
-    }
+    //}
 }
 			
