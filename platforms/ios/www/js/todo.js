@@ -42,7 +42,7 @@ function addTableRow(todoDictionary, appIsLoading) {
 	element2.setAttribute("onchange", "saveToDoList()");
 	cell2.appendChild(element2);	
 	
-	//saveToDoList();
+	saveToDoList();
 			 
 	if (!appIsLoading) alert("Task Added Successfully.");    
 }
@@ -52,7 +52,7 @@ function deleteSelectedRow(deleteButton) {
     var p = deleteButton.parentNode.parentNode;
     p.parentNode.removeChild(p);
     
-    //saveToDoList();
+    saveToDoList();
 }
 
 // save the to-do list
