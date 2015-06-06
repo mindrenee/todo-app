@@ -4,14 +4,12 @@ function createToDo() {
     
     if (todo == null || todo == "") {
         alert("To do cannot be empty");
-        return false;
     }
     else {
         // append the new to-do with the table
         todoDictionary = { text : todo};
         document.forms["add"]["item"].value = '';
         addTableRow(todoDictionary, false);
-        return false;
     }
 }
 
