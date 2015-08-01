@@ -1,25 +1,35 @@
+var todos = [];
+
 function createToDo() {
-	var todoDictionary = {};
-	var todo = document.forms["add"]["item"].value;
+    
+    var todo = document.getElementById("todo").value;
+    
     
     if (todo == null || todo == "") {
         alert("To do cannot be empty");
     }
     else {
         // append the new to-do with the table
-        todoDictionary = { text : todo};
-        document.forms["add"]["item"].value = '';
-        addTableRow(todoDictionary, false);
+        alert("todo: " + todo);
+        
+        todos.push(todo);
+        document.getElementById("todo").value = "";       
+        addTableRow(todos, false);
+        
+        console.log(todos);
     }
 }
 
 // add a row to the table
 var rowID = 0;
-function addTableRow(todoDictionary, appIsLoading) {
-	rowID +=1;
+function addTableRow(todos, appIsLoading) {
+	
+	alert(todos);
+	
     var table = document.getElementById("dataTable");
     var rowCount = table.rows.length;
-    var row = table.insertRow(rowCount);			
+    var row = table.insertRow(rowCount);	
+    var todoLength = todos.length;		
 
 	// create the checkbox
     var cell1 = row.insertCell(0);
@@ -36,10 +46,11 @@ function addTableRow(todoDictionary, appIsLoading) {
 	element2.name = "txtbox[]";
 	element2.size = 16;
 	element2.id = "text" + rowID;
-	element2.value = todoDictionary["text"];
+	element2.value = todos[todoLength];
 	element2.setAttribute("onchange", "saveToDoList()");
 	cell2.appendChild(element2);	
 	
+	rowID +=1;
 	saveToDoList();
 			 
 	if (!appIsLoading) alert("Task Added Successfully.");    
@@ -71,6 +82,7 @@ function saveToDoList() {
             // retrieve the content of the to-do
             var textbox = row.cells[1].childNodes[0];
             textValue = textbox.value;
+            
  
             // populate the array
             todoArray["row" + i] =
@@ -85,35 +97,25 @@ function saveToDoList() {
     }
  
     // use the local storage API to persist the data as JSON
-    window.localStorage.setItem("todoList", JSON.stringify(todoArray));
+    window.localStorage.setItem("todoList", JSON.stringify(todos));
 }
 
 // load the to-do list
 function loadToDoList() {
     // use the local storage API load the JSON formatted to-do list, and decode it
     var theList = JSON.parse(window.localStorage.getItem("todoList"));
- 
-    /*if (null == theList || theList == "null")
+
+    var count = 0;
+    for (var obj in theList)
     {
-        //deleteAllRows();
+        count++;
     }
-    else
-    {*/
-        var count = 0;
-        for (var obj in theList)
-        {
-            count++;
-        }
  
-        // remove any existing rows from the table
-        //deleteAllRows();
- 
-        // loop through the to-dos
-        for(var i = 0; i < count; i++)
-        {
-            // adding a row to the table for each one
-            addTableRow(theList["row" + i], true);
-        }
-    //}
+    // loop through the to-dos
+    for(var i = 0; i < count; i++)
+    {
+        // adding a row to the table for each one
+        addTableRow(theList[i], true);
+    }
 }
 			
